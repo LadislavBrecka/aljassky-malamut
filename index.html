@@ -114,10 +114,11 @@
 
   <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
   <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+    <a href="#intro" class="w3-bar-item w3-button w3-padding-large" onclick="myFunctionNavBar()">Úvod</a>
+    <a href="#parents" class="w3-bar-item w3-button w3-padding-large" onclick="myFunctionNavBar()">Rodičia</a>
+    <a href="#previous" class="w3-bar-item w3-button w3-padding-large" onclick="myFunctionNavBar()">Predošlé vrhy</a>
+    <a href="#actual" class="w3-bar-item w3-button w3-padding-large" onclick="myFunctionNavBar()">Aktuálny vrh</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunctionNavBar()">Kontakt</a>
   </div>
 
   <!-- Page content -->
@@ -185,41 +186,41 @@
       <!-- The four columns -->
       <div class="row">
         <div class="column">
-          <img src="images/predosle_vrhy/1.jpg" style="width:100%" onclick="myFunction(this);">
+          <img src="images/predosle_vrhy/1.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
         </div>
         <div class="column">
-          <img src="images/predosle_vrhy/2.jpg" style="width:100%" onclick="myFunction(this);">
+          <img src="images/predosle_vrhy/2.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
         </div>
         <div class="column">
-          <img src="images/predosle_vrhy/3.jpg" style="width:100%" onclick="myFunction(this);">
+          <img src="images/predosle_vrhy/3.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
         </div>
         <div class="column">
-          <img src="images/predosle_vrhy/4.jpg" style="width:100%" onclick="myFunction(this);">
+          <img src="images/predosle_vrhy/4.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
         </div>
         <div class="column">
-          <img src="images/predosle_vrhy/5.jpg" style="width:100%" onclick="myFunction(this);">
+          <img src="images/predosle_vrhy/5.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
         </div>
 
         <div class="column">
-          <img src="images/predosle_vrhy/7.jpg" style="width:100%" onclick="myFunction(this);">
+          <img src="images/predosle_vrhy/7.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
         </div>
         <div class="column">
-          <img src="images/predosle_vrhy/8.jpg" style="width:100%" onclick="myFunction(this);">
+          <img src="images/predosle_vrhy/8.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
         </div>
         <div class="column">
-          <img src="images/predosle_vrhy/9.jpg" style="width:100%" onclick="myFunction(this);">
+          <img src="images/predosle_vrhy/9.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
         </div>
         <div class="column">
-          <img src="images/predosle_vrhy/10.jpg" style="width:100%" onclick="myFunction(this);">
+          <img src="images/predosle_vrhy/10.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
         </div>
         <div class="column">
-          <img src="images/predosle_vrhy/11.jpg" style="width:100%" onclick="myFunction(this);">
+          <img src="images/predosle_vrhy/11.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
         </div>
         <div class="column">
-          <img src="images/predosle_vrhy/12.jpg" style="width:100%" onclick="myFunction(this);">
+          <img src="images/predosle_vrhy/12.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
         </div>
         <div class="column">
-          <img src="images/predosle_vrhy/6.jpg" style="width:100%" onclick="myFunction(this);">
+          <img src="images/predosle_vrhy/6.jpg" style="width:100%" onclick="myFunctionPrevious(this);">
         </div>
       </div>
       <!-- <div class="container">
@@ -229,25 +230,65 @@
       </div> -->
       <div class="container">
         <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-        <img id="expandedImg" style="width:80%; text-align:center;">
-        <div id="imgtext"></div>
+        <img id="expandedImgPrevious" style="width:80%; text-align:center;">
+        <div id="imgtextPrevious"></div>
       </div>
     </div>
 
-    <!-- The Actual Section -->
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="actual">
-      <h2 class="w3-wide">Aktuálny vrh</h2>
-      <p class="ex2">Šteniatka</p>
-      <div class="w3-row w3-padding-32">
-        <div class="w3-third">
-          <img src="images/predosle_vrhy/1.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+    <!-- The Previous Section -->
+    <div id="actual">
+      <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:500px">
+        <h2 class="w3-wide">Predošlé vrhy</h2>
+      </div>
+      <!-- The four columns -->
+      <div class="row">
+        <div class="column">
+          <img src="images/predosle_vrhy/1.jpg" style="width:100%" onclick="myFunctionActual(this);">
         </div>
-        <div class="w3-third">
-          <img src="images/predosle_vrhy/2.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        <div class="column">
+          <img src="images/predosle_vrhy/2.jpg" style="width:100%" onclick="myFunctionActual(this);">
         </div>
-        <div class="w3-third">
-          <img src="images/predosle_vrhy/2.jpg" class="w3-round" alt="Random Name" style="width:60%">
+        <div class="column">
+          <img src="images/predosle_vrhy/3.jpg" style="width:100%" onclick="myFunctionActual(this);">
         </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/4.jpg" style="width:100%" onclick="myFunctionActual(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/5.jpg" style="width:100%" onclick="myFunctionActual(this);">
+        </div>
+
+        <div class="column">
+          <img src="images/predosle_vrhy/7.jpg" style="width:100%" onclick="myFunctionActual(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/8.jpg" style="width:100%" onclick="myFunctionActual(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/9.jpg" style="width:100%" onclick="myFunctionActual(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/10.jpg" style="width:100%" onclick="myFunctionActual(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/11.jpg" style="width:100%" onclick="myFunctionActual(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/12.jpg" style="width:100%" onclick="myFunctionActual(this);">
+        </div>
+        <div class="column">
+          <img src="images/predosle_vrhy/6.jpg" style="width:100%" onclick="myFunctionActual(this);">
+        </div>
+      </div>
+      <!-- <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <p style="text-align:center;"><img id="expandedImgActual" style="width:60%"></p>
+        <div id="imgtextActual" class="center"></div>
+      </div> -->
+      <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImgActual" style="width:80%; text-align:center;">
+        <div id="imgtextActual"></div>
       </div>
     </div>
 
@@ -294,7 +335,7 @@
     }
 
     // Used to toggle the menu on small screens when clicking on the menu button
-    function myFunction() {
+    function myFunctionNavBar() {
       var x = document.getElementById("navDemo");
       if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
@@ -318,13 +359,22 @@
     //   expandImg.parentElement.style.display = "block";
     //   location.href = "#expandedImgActual";
     // }
-    function myFunction(imgs) {
-      var expandImg = document.getElementById("expandedImg");
-      var imgText = document.getElementById("imgtext");
+    function myFunctionPrevious(imgs) {
+      var expandImg = document.getElementById("expandedImgPrevious");
+      var imgText = document.getElementById("imgtextPrevious");
       expandImg.src = imgs.src;
       imgText.innerHTML = imgs.alt;
       expandImg.parentElement.style.display = "block";
-      location.href = "#expandedImg";
+      location.href = "#expandedImgPrevious";
+    }
+    
+    function myFunctionActual(imgs) {
+      var expandImg = document.getElementById("expandedImgActual");
+      var imgText = document.getElementById("imgtextActual");
+      expandImg.src = imgs.src;
+      imgText.innerHTML = imgs.alt;
+      expandImg.parentElement.style.display = "block";
+      location.href = "#expandedImgActual";
     }
   </script>
 
